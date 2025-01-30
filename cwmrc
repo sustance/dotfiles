@@ -74,7 +74,7 @@ command "-PDF Arranger  " "pdfarranger"
 command " Eye of Gnome  " "eog"
 
 command "_____________________" " "
-command "-Scrot Clip"   "scrot -s -e 'xclip -selection clipboard -t image/png -i $f'"
+command "-THIS IS A TEST"   "scrot -s -e 'xclip -selection clipboard -t image/png -i $f'"
 command "^ wavemon "    "xfce4-terminal -e wavemon"
 command "-ttyplot"      "xfce4-terminal -e ping 8.8.8.8 | sed -u 's/^.*time=//g; s/ ms//g' | ttyplot -t "ping to 8.8.8.8" -u ms"
 command "^ vol"         "xfce4-terminal --geometry=60x30 -e alsamixer"

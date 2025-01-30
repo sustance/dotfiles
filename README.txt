@@ -24,4 +24,4 @@ git commit -m "Add bashrc and vimrc"
 Push to a remote repository (e.g., GitHub):
 
 git remote add origin https://github.com/username/dotfiles.git
-git push -u origin main
+git push -u origin master

@@ -1,20 +1,11 @@
-#[]
 # cwm -n check this file for valiity
      # Set default Xft(3) font
-     
-fontname "sans-serif:pixelsize=28:bold"
-
-     #fontname "noto sans CJK:pixelsize=28:Regular"
-
-
+fontname "sans-serif:pixelsize=24:bold"
 feh --bg-fill /home/aaa/store/ill/Rose.png
-     
+  
 exec --no-startup-id fcitx
-
 #xterm -e xsetroot -solid steelblue
-
 #SET terminal font in ~/.xinit  via xrandr --dpi 168
-
 #SET GTK title bar decorations by creating and editing...
 #       ~/.config/gtk-[2,3,4].0/settings.ini (following or similar)
 #gtk-font-name = DejaVu Sans 16
@@ -28,8 +19,6 @@ exec --no-startup-id fcitx
 # syntax error     exec feh --bg-fill /home/aaa/ntfs/U1iv8WbeRVoyekN0CILf--0kpuk.webp
 # --bg-scale --scale-img
 #/usr/bin/feh --bg-scale /home/aaa/store/ill/bStjoeH0LEXH7yXFuJu5--1--u1m5s.webp
-###
-
 
 borderwidth 4
 color activeborder blue
@@ -59,11 +48,9 @@ command "-Firefox       " ".firefox"
 # mmand " Google C Socks" "google-chrome --proxy-server=socks://127.0.0.1:9999"
 command "-Libre Office  " "libreoffice"
 command " Telegram      " "/home/aaa/store/Applications/Telegram/Telegram"
-command "-Background    " "xterm -e xsetroot -solid steelblue"
-command " sshfs s       " "xfce4-terminal -e sshfs s:/home/aaa /home/aaa/rem/s &&"
-command " Scrot Clip  " "scrot -s -e 'xclip -selection clipboard -t image/png -i $f'"
-
-command "_____________________" " "
+command " Background    " "xterm -e xsetroot -solid steelblue"
+#command " sshfs s       " "xfce4-terminal -e sshfs s:/home/aaa /home/aaa/rem/s &&"
+command " Scrot Clip__________" "scrot -s -e 'xclip -selection clipboard -t image/png -i $f'"
 command "-Settings" "xfce4-settings-manager"
 command " Netw Manag" "nm-connection-editor"
 command " Virt manager" "virtual-manager"
@@ -71,13 +58,10 @@ command " Virsh halt76" "virsh shutdown openbsd7.6 --mode acpi"
 command " Inkscape      " "inkscape"
 command " TeXstudio     " "texstudio"
 command "-PDF Arranger  " "pdfarranger"
-command " Eye of Gnome  " "eog"
-
-command "_____________________" " "
-command "-THIS IS A TEST"   "scrot -s -e 'xclip -selection clipboard -t image/png -i $f'"
+command " Eye of Gnome_____" "eog"
 command "^ wavemon "    "xfce4-terminal -e wavemon"
 command "-ttyplot"      "xfce4-terminal -e ping 8.8.8.8 | sed -u 's/^.*time=//g; s/ ms//g' | ttyplot -t "ping to 8.8.8.8" -u ms"
-command "^ vol"         "xfce4-terminal --geometry=60x30 -e alsamixer"
+command " vol"          "xfce4-terminal --geometry=60x30 -e alsamixer"
 command "^nmtui"        "xfce4-terminal -e nmtui"
 command "-htop"         "xfce4-terminal -e htop"
 command " SYSTEM"       "xfce4-terminal -e  /home/aaa/.cwmCaseMenu.sh"
@@ -85,45 +69,29 @@ command "-Panel"        "xfce4-panel"
 # mmand " xrdb"         "xrdb -merge /home/aaa/.xsession"
 
    # dpkg  -i  --force-all  (lpr-drivername)
-   #command display           displayselect
-      
+   #command display           displayselect 
 # rclone  networking dmenunet webcam  xfreerdp
 
    #autogroup <group> [<windowname>,]<windowclass>
      # Autogroup definitions
-
      autogroup 1 "xfe.Xfe"
      autogroup 1 "google-chrome,Google-chrome"
      autogroup 1 "telegram-desktop,TelegramDesktop"
      autogroup 1 "firefox,Firefox"
-
      autogroup 1 "xterm,XTerm"
-
-    
      #autogroup 4 "gimp","Gimp"
      #autogroup 4 "org.inkscape.Inkscape","Inkscape"
-
-
-
-
 
      #dont use h,j,k,l
      bind-key 4-a       "rofi -show drun"
      bind-key 4-s       "rofi -show ssh" 
      bind-key 4-w       "rofi -show window"
-     
      bind-key 4-o       "xfce4-terminal -e nmtui"
      bind-key 4-t       "xfce4-terminal -e htop"
-
      bind-key 4-r       "restart"
      bind-key 4-q       "quit"
-     
      bind-key 4-n       "xfwrite /home/aaa/cwm.txt"
     
-
-
-
-     
    # Key bindings
      bind-key CM-r           window-menu-label
      bind-key CS-Return      "xterm -e top"
@@ -158,8 +126,3 @@ command "-Panel"        "xfce4-panel"
 #FONTSIZE="16x32"
 
 #sudo update-initramfs -u
-
-
-
-
-fontname "sans-serif:pixelsize=12:bold"

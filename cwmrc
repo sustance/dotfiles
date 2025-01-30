@@ -1,0 +1,165 @@
+#[]
+# cwm -n check this file for valiity
+     # Set default Xft(3) font
+     
+fontname "sans-serif:pixelsize=28:bold"
+
+     #fontname "noto sans CJK:pixelsize=28:Regular"
+
+
+feh --bg-fill /home/aaa/store/ill/Rose.png
+     
+exec --no-startup-id fcitx
+
+#xterm -e xsetroot -solid steelblue
+
+#SET terminal font in ~/.xinit  via xrandr --dpi 168
+
+#SET GTK title bar decorations by creating and editing...
+#       ~/.config/gtk-[2,3,4].0/settings.ini (following or similar)
+#gtk-font-name = DejaVu Sans 16
+#gtk-xft-dpi = 96
+
+#GET Chrom to obey this as well by creating and editing...
+#       ~/.config/chrome-flags.conf 
+#--gtk-version=4
+
+# syntax error     exec "xsetroot -solid steelblue"
+# syntax error     exec feh --bg-fill /home/aaa/ntfs/U1iv8WbeRVoyekN0CILf--0kpuk.webp
+# --bg-scale --scale-img
+#/usr/bin/feh --bg-scale /home/aaa/store/ill/bStjoeH0LEXH7yXFuJu5--1--u1m5s.webp
+###
+
+
+borderwidth 4
+color activeborder blue
+color menubg lightblue
+color inactiveborder darkblue
+#gap 0 0 0 180
+gap 0 0 0 0
+     sticky yes
+     #syntax error         cursor.size.ratio=4.0
+	 # command xterm  xterm             CM-Return     
+
+     # Launch from exec    M-?
+#     xbacklight -set 5%" 
+#     sndctl output.level=0.
+
+#sudo nano /etc/default/grub.d/custom.cfg. 
+#GRUB_CMDLINE_LINUX_DEFAULT="console=tty0 font=<desired-font-size>"
+
+# Override built-in term command
+   #xrdb -merge ~/.Xresources
+command "-Terminal      " "xfce4-terminal"
+command "-Xfe           " "xfe"
+command "-Nautilus      " "nautilus"
+command " Google Chrome " "google-chrome"
+command "-Firefox       " ".firefox"
+# mmand " Firefox  Socks" "firefox"
+# mmand " Google C Socks" "google-chrome --proxy-server=socks://127.0.0.1:9999"
+command "-Libre Office  " "libreoffice"
+command " Telegram      " "/home/aaa/store/Applications/Telegram/Telegram"
+command "-Background    " "xterm -e xsetroot -solid steelblue"
+command " sshfs s       " "xfce4-terminal -e sshfs s:/home/aaa /home/aaa/rem/s &&"
+command " Scrot Clip  " "scrot -s -e 'xclip -selection clipboard -t image/png -i $f'"
+
+command "_____________________" " "
+command "-Settings" "xfce4-settings-manager"
+command " Netw Manag" "nm-connection-editor"
+command " Virt manager" "virtual-manager"
+command " Virsh halt76" "virsh shutdown openbsd7.6 --mode acpi"
+command " Inkscape      " "inkscape"
+command " TeXstudio     " "texstudio"
+command "-PDF Arranger  " "pdfarranger"
+command " Eye of Gnome  " "eog"
+
+command "_____________________" " "
+command "-Scrot Clip"   "scrot -s -e 'xclip -selection clipboard -t image/png -i $f'"
+command "^ wavemon "    "xfce4-terminal -e wavemon"
+command "-ttyplot"      "xfce4-terminal -e ping 8.8.8.8 | sed -u 's/^.*time=//g; s/ ms//g' | ttyplot -t "ping to 8.8.8.8" -u ms"
+command "^ vol"         "xfce4-terminal --geometry=60x30 -e alsamixer"
+command "^nmtui"        "xfce4-terminal -e nmtui"
+command "-htop"         "xfce4-terminal -e htop"
+command " SYSTEM"       "xfce4-terminal -e  /home/aaa/.cwmCaseMenu.sh"
+command "-Panel"        "xfce4-panel"
+# mmand " xrdb"         "xrdb -merge /home/aaa/.xsession"
+
+   # dpkg  -i  --force-all  (lpr-drivername)
+   #command display           displayselect
+      
+# rclone  networking dmenunet webcam  xfreerdp
+
+   #autogroup <group> [<windowname>,]<windowclass>
+     # Autogroup definitions
+
+     autogroup 1 "xfe.Xfe"
+     autogroup 1 "google-chrome,Google-chrome"
+     autogroup 1 "telegram-desktop,TelegramDesktop"
+     autogroup 1 "firefox,Firefox"
+
+     autogroup 1 "xterm,XTerm"
+
+    
+     #autogroup 4 "gimp","Gimp"
+     #autogroup 4 "org.inkscape.Inkscape","Inkscape"
+
+
+
+
+
+     #dont use h,j,k,l
+     bind-key 4-a       "rofi -show drun"
+     bind-key 4-s       "rofi -show ssh" 
+     bind-key 4-w       "rofi -show window"
+     
+     bind-key 4-o       "xfce4-terminal -e nmtui"
+     bind-key 4-t       "xfce4-terminal -e htop"
+
+     bind-key 4-r       "restart"
+     bind-key 4-q       "quit"
+     
+     bind-key 4-n       "xfwrite /home/aaa/cwm.txt"
+    
+
+
+
+     
+   # Key bindings
+     bind-key CM-r           window-menu-label
+     bind-key CS-Return      "xterm -e top"
+     bind-key C4-equal       window-vmaximize
+     bind-key C4S-equal      window-hmaximize
+     bind-key M-1            group-only-1
+     bind-key M-2            group-only-2
+     bind-key M-3            group-only-3
+     bind-key MS-1           window-movetogroup-1
+     bind-key MS-2           window-movetogroup-2
+     bind-key MS-3           window-movetogroup-3
+     unbind-key 4-o
+     unbind-key CM-equal
+     unbind-key CMS-equal
+
+   # Mouse bindings
+     bind-mouse M-2          window-lower
+     bind-mouse M-3          window-resize
+     
+	#apt install xdotool, script cwm-w.mv in path
+     bind-key 4-h      cwm-w-mv left   # Move window to side of the screen.
+     bind-key 4-j      cwm-w-mv bottom
+     bind-key 4-k      cwm-w-mv top
+     bind-key 4-l      cwm-w-mv right
+     bind-key 4-Left   cwm-w-mv left
+     bind-key 4-Down   cwm-w-mv bottom
+     bind-key 4-Up     cwm-w-mv top
+     bind-key 4-Right  cwm-w-mv right
+
+#edit the file /etc/default/console-setup and enter:
+#FONTFACE="Terminus"
+#FONTSIZE="16x32"
+
+#sudo update-initramfs -u
+
+
+
+
+fontname "sans-serif:pixelsize=12:bold"
